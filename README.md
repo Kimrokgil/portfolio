@@ -1,5 +1,5 @@
-# portfolio
-Kim Rok Gil's project portfolio
+# Project portfolio
+김록길(36세)
 
 1. Finance Blog 💰 
 
