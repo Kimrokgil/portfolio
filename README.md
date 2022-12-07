@@ -1,5 +1,5 @@
-# Project portfolio
-김록길(36세)
+# Project portfolio💻
+# 김록길(36세)🔺
 
 1. Finance Blog 💰 
 
