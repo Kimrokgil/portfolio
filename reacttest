@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/6310000/ulsankhouse/getUlsankhouseList'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '=' +
+            'rOXRli42F3ukr9MrLFi2hysHMoUHapmR5Zg3BfK%2FJVbvaGX4LI3ZiPNlcjJQRAMd3BKKTgrtZ7u3Sg4JhK7XOw%3D%3D'; /*Service Key*/
+
+        queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+        //queryParams += '&' + encodeURIComponent('searchTitle') + '=' + encodeURIComponent('다담한옥'); /**/
+
+        function a()
+        {
+            alert('aa');
+        }
+        //a();
+
+        xhr.open('GET', url + queryParams);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                //console.log('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+                let result = this.responseText
+
+                console.log(result);
+
+                div1 = document.getElementById("div1");
+                div1.innerHTML = result;
+            }
+        };
+
+        xhr.send('');
+    </script>
+
+
+
+    <div id="div1">
+
+    </div>
+</body>
+
+</html>
